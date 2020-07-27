@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Compound Savings-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="CSavingViewController" customModule="FinancialCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgd-3D-m5P">
+                                <rect key="frame" x="0.0" y="88" width="375" height="406"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="fI7-B8-dqr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6i-kJ-xEM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huZ-Gl-D0K">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="570"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="E83-MX-oDV">
+                                                        <rect key="frame" x="25" y="20" width="325" height="530"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Future Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARf-hr-HQc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="53"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="aJa-7L-PXN"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Principle Investment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mrP-5I-Wc1">
+                                                                <rect key="frame" x="0.0" y="68" width="325" height="53.333333333333343"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="6UZ-3J-MOE"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Interest" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="znA-b3-FDc">
+                                                                <rect key="frame" x="0.0" y="136.33333333333334" width="325" height="53"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="7jw-vQ-Wiy"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Payment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v58-7S-YlG">
+                                                                <rect key="frame" x="0.0" y="204.33333333333331" width="325" height="53.333333333333314"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="zXQ-SK-C63"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Compounds Per Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15a-jg-4lr">
+                                                                <rect key="frame" x="0.0" y="272.66666666666669" width="325" height="53"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="lgq-jD-rhO"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number Of Years" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtF-2E-DB6">
+                                                                <rect key="frame" x="0.0" y="340.66666666666669" width="325" height="53"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="IcE-Ea-nFj"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <stackView opaque="NO" contentMode="center" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5q7-g4-HlW">
+                                                                <rect key="frame" x="0.0" y="408.66666666666663" width="325" height="53.333333333333314"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit at End      " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmC-qb-nXl">
+                                                                        <rect key="frame" x="0.0" y="13.333333333333369" width="268" height="26.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <switch opaque="NO" contentMode="bottom" horizontalHuggingPriority="750" verticalHuggingPriority="750" highlighted="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zus-GG-Nre">
+                                                                        <rect key="frame" x="276" y="11" width="51" height="31"/>
+                                                                        <color key="onTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                                        <color key="thumbTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <connections>
+                                                                            <action selector="switchFunctionality:" destination="9pv-A4-QxB" eventType="valueChanged" id="rzA-1V-r2Y"/>
+                                                                        </connections>
+                                                                    </switch>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="251-hK-4TB">
+                                                                <rect key="frame" x="0.0" y="477" width="325" height="53"/>
+                                                                <color key="backgroundColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="0.86863227740000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <state key="normal" title="Calculate">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="calculateFunctionality:" destination="9pv-A4-QxB" eventType="touchUpInside" id="h8b-Gx-MNP"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.78579533099999999" green="0.88605099919999997" blue="0.90195822719999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.066802823600000005" green="0.066802823600000005" blue="0.066802823600000005" alpha="0.15467144690000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="E83-MX-oDV" firstAttribute="leading" secondItem="huZ-Gl-D0K" secondAttribute="leading" constant="25" id="5vH-xm-cFs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="E83-MX-oDV" secondAttribute="bottom" constant="20" id="79y-Ru-jPa"/>
+                                                    <constraint firstAttribute="height" constant="570" id="LJ9-sd-vca"/>
+                                                    <constraint firstAttribute="trailing" secondItem="E83-MX-oDV" secondAttribute="trailing" constant="25" id="Yqc-GU-pXe"/>
+                                                    <constraint firstItem="E83-MX-oDV" firstAttribute="top" secondItem="huZ-Gl-D0K" secondAttribute="top" constant="20" id="xxn-Kl-IQa"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="huZ-Gl-D0K" firstAttribute="top" secondItem="Kue-7W-nmV" secondAttribute="top" id="EpV-0G-ltF"/>
+                                            <constraint firstItem="huZ-Gl-D0K" firstAttribute="leading" secondItem="Kue-7W-nmV" secondAttribute="leading" id="OVL-OX-t0B"/>
+                                            <constraint firstItem="huZ-Gl-D0K" firstAttribute="bottom" secondItem="Kue-7W-nmV" secondAttribute="bottom" id="YAg-45-kdJ"/>
+                                            <constraint firstItem="huZ-Gl-D0K" firstAttribute="width" secondItem="15t-e2-asJ" secondAttribute="width" id="mYv-OB-N6d"/>
+                                            <constraint firstItem="huZ-Gl-D0K" firstAttribute="trailing" secondItem="Kue-7W-nmV" secondAttribute="trailing" id="y9K-5H-M6k"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="Kue-7W-nmV"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="15t-e2-asJ"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.066802823600000005" green="0.066802823600000005" blue="0.066802823600000005" alpha="0.15467144690000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="M6i-kJ-xEM" secondAttribute="bottom" id="HT2-9q-Hzp"/>
+                                    <constraint firstItem="M6i-kJ-xEM" firstAttribute="leading" secondItem="xgd-3D-m5P" secondAttribute="leading" id="YKf-Cl-sSk"/>
+                                    <constraint firstAttribute="bottom" secondItem="fI7-B8-dqr" secondAttribute="bottom" constant="-24" id="dxh-PR-Kka"/>
+                                    <constraint firstItem="fI7-B8-dqr" firstAttribute="leading" secondItem="xgd-3D-m5P" secondAttribute="leading" id="j03-ct-Ez3"/>
+                                    <constraint firstItem="fI7-B8-dqr" firstAttribute="top" secondItem="xgd-3D-m5P" secondAttribute="top" id="kK4-MP-QlD"/>
+                                    <constraint firstAttribute="trailing" secondItem="M6i-kJ-xEM" secondAttribute="trailing" id="pYX-6j-6Ds"/>
+                                    <constraint firstItem="M6i-kJ-xEM" firstAttribute="top" secondItem="xgd-3D-m5P" secondAttribute="top" id="rOK-Cn-QFE"/>
+                                    <constraint firstAttribute="trailing" secondItem="fI7-B8-dqr" secondAttribute="trailing" id="sjU-Cs-sG5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0yB-27-1wk" userLabel="Keyboard" customClass="Keyboard" customModule="FinancialCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="527" width="414" height="286"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xgd-3D-m5P" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="8px-4J-TGc"/>
+                            <constraint firstItem="0yB-27-1wk" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="Dwb-Bj-Lhu"/>
+                            <constraint firstItem="0yB-27-1wk" firstAttribute="top" secondItem="xgd-3D-m5P" secondAttribute="bottom" id="KjP-st-RRk"/>
+                            <constraint firstItem="0yB-27-1wk" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Vmz-gn-Vgy"/>
+                            <constraint firstItem="xgd-3D-m5P" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="XLp-VD-Ui3"/>
+                            <constraint firstItem="xgd-3D-m5P" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="YDx-3k-jUB"/>
+                            <constraint firstItem="xgd-3D-m5P" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.5" id="dVo-0S-Fpi"/>
+                            <constraint firstItem="0yB-27-1wk" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="nQq-xX-pB0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Compound Savings" largeTitleDisplayMode="always" id="YvA-ST-rgc">
+                        <barButtonItem key="leftBarButtonItem" title="Clear All" id="od6-Ly-sGz">
+                            <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="clearAllFields:" destination="9pv-A4-QxB" id="YBU-aB-wgm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="fh1-Vb-H9c">
+                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="yob-Bj-eKf" kind="show" id="Zx8-Th-YXz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="compoundsPYearTextF" destination="15a-jg-4lr" id="kYK-T1-EoT"/>
+                        <outlet property="depositSwitch" destination="zus-GG-Nre" id="UmL-Th-gLN"/>
+                        <outlet property="futureValTextF" destination="ARf-hr-HQc" id="sOQ-4T-TX2"/>
+                        <outlet property="interestTextF" destination="znA-b3-FDc" id="Svq-Gc-k0o"/>
+                        <outlet property="keyboard" destination="0yB-27-1wk" id="BJt-3S-vNU"/>
+                        <outlet property="noOfMonthsTextF" destination="UtF-2E-DB6" id="14a-RT-wjr"/>
+                        <outlet property="paymentTextF" destination="v58-7S-YlG" id="KB9-n4-4lr"/>
+                        <outlet property="principalInvestmentTextF" destination="mrP-5I-Wc1" id="Paz-pl-BGS"/>
+                        <outlet property="switchText" destination="xmC-qb-nXl" id="4UL-MQ-mf0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1860" y="-164.03940886699507"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="6A9-h0-o5W">
+            <objects>
+                <viewController id="yob-Bj-eKf" customClass="HelpViewController" customModule="FinancialCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dnp-Dz-EYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-Fw-HQg">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rBL-Fw-HQg" firstAttribute="top" secondItem="Oqv-VI-Afz" secondAttribute="top" id="DSe-At-NCQ"/>
+                            <constraint firstItem="Oqv-VI-Afz" firstAttribute="trailing" secondItem="rBL-Fw-HQg" secondAttribute="trailing" id="Ev2-6b-oWT"/>
+                            <constraint firstItem="rBL-Fw-HQg" firstAttribute="leading" secondItem="Oqv-VI-Afz" secondAttribute="leading" id="n7w-bV-fVf"/>
+                            <constraint firstItem="Oqv-VI-Afz" firstAttribute="bottom" secondItem="rBL-Fw-HQg" secondAttribute="bottom" id="yhB-FX-xRa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oqv-VI-Afz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="I3q-Zv-jZf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1g-Nj-qjB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1330.4347826086957" y="681.69642857142856"/>
+        </scene>
+        <!--Mortages-->
+        <scene sceneID="Xh0-FZ-CGw">
+            <objects>
+                <viewController id="Jt5-6v-DhQ" customClass="MortageViewController" customModule="FinancialCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D75-OC-HTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFG-gM-vLu">
+                                <rect key="frame" x="0.0" y="88" width="375" height="406"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="f1b-OB-bpH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcX-hp-ZrO">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2P9-jB-Axg">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f7I-gH-90R">
+                                                        <rect key="frame" x="25" y="20" width="325" height="370"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Loan Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAz-ug-CI8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="58"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="edtingEnd:" destination="Jt5-6v-DhQ" eventType="editingDidEnd" id="oPm-4P-pkU"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Interest" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="65x-6F-LH0">
+                                                                <rect key="frame" x="0.0" y="78" width="325" height="58"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="edtingEnd:" destination="Jt5-6v-DhQ" eventType="editingDidEnd" id="x7A-bY-R5m"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Payment per month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-9v-Ntg">
+                                                                <rect key="frame" x="0.0" y="156" width="325" height="58"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="edtingEnd:" destination="Jt5-6v-DhQ" eventType="editingDidEnd" id="Vam-6q-vuM"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No of Years" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgu-Iw-WCQ">
+                                                                <rect key="frame" x="0.0" y="234" width="325" height="58"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="edtingEnd:" destination="Jt5-6v-DhQ" eventType="editingDidEnd" id="z1r-KI-Aec"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLw-ti-SXF">
+                                                                <rect key="frame" x="0.0" y="312" width="325" height="58"/>
+                                                                <color key="backgroundColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="0.86863227740000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <state key="normal" title="Calculate">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="calculateAction:" destination="Jt5-6v-DhQ" eventType="touchUpInside" id="qwW-ty-CNW"/>
+                                                                    <action selector="calculateFunctionality:" destination="9pv-A4-QxB" eventType="touchUpInside" id="foH-ry-KWe"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="f7I-gH-90R" secondAttribute="trailing" constant="25" id="F12-T3-XRx"/>
+                                                    <constraint firstItem="f7I-gH-90R" firstAttribute="leading" secondItem="2P9-jB-Axg" secondAttribute="leading" constant="25" id="Lg1-e0-T05"/>
+                                                    <constraint firstItem="f7I-gH-90R" firstAttribute="top" secondItem="2P9-jB-Axg" secondAttribute="top" constant="20" id="OY6-Kx-gp1"/>
+                                                    <constraint firstAttribute="height" constant="400" id="osd-sB-mpE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f7I-gH-90R" secondAttribute="bottom" constant="10" id="vwa-cG-srj" userLabel="bottom = Stack View.bottom + 20"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.066802823600000005" green="0.066802823600000005" blue="0.066802823600000005" alpha="0.15467144690000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="2P9-jB-Axg" firstAttribute="width" secondItem="aZJ-sh-Mb0" secondAttribute="width" id="0sW-Nk-hTc"/>
+                                            <constraint firstItem="2P9-jB-Axg" firstAttribute="leading" secondItem="Hh5-pz-b6O" secondAttribute="leading" id="LN4-yZ-UqR"/>
+                                            <constraint firstItem="2P9-jB-Axg" firstAttribute="bottom" secondItem="Hh5-pz-b6O" secondAttribute="bottom" id="UZO-GW-20G"/>
+                                            <constraint firstItem="2P9-jB-Axg" firstAttribute="trailing" secondItem="Hh5-pz-b6O" secondAttribute="trailing" id="bsy-wf-SZa"/>
+                                            <constraint firstItem="2P9-jB-Axg" firstAttribute="top" secondItem="Hh5-pz-b6O" secondAttribute="top" id="tKZ-Dt-wxi"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="Hh5-pz-b6O"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="aZJ-sh-Mb0"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lcX-hp-ZrO" secondAttribute="trailing" id="024-Tv-7od"/>
+                                    <constraint firstItem="lcX-hp-ZrO" firstAttribute="leading" secondItem="HFG-gM-vLu" secondAttribute="leading" id="0Ud-M2-4Su"/>
+                                    <constraint firstAttribute="trailing" secondItem="f1b-OB-bpH" secondAttribute="trailing" id="9Cz-As-ClF"/>
+                                    <constraint firstItem="f1b-OB-bpH" firstAttribute="top" secondItem="HFG-gM-vLu" secondAttribute="top" id="LH6-lW-mA9"/>
+                                    <constraint firstAttribute="bottom" secondItem="lcX-hp-ZrO" secondAttribute="bottom" id="RxH-u1-u8S"/>
+                                    <constraint firstItem="lcX-hp-ZrO" firstAttribute="top" secondItem="HFG-gM-vLu" secondAttribute="top" id="ZvO-r4-Eu1"/>
+                                    <constraint firstItem="f1b-OB-bpH" firstAttribute="leading" secondItem="HFG-gM-vLu" secondAttribute="leading" id="cTG-pw-tS4"/>
+                                    <constraint firstAttribute="bottom" secondItem="f1b-OB-bpH" secondAttribute="bottom" id="kvD-iE-Nw6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-NG-Bq4" customClass="Keyboard" customModule="FinancialCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="494" width="375" height="235"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HFG-gM-vLu" firstAttribute="height" secondItem="D75-OC-HTJ" secondAttribute="height" multiplier="0.5" id="4MD-j7-e0A"/>
+                            <constraint firstItem="HFG-gM-vLu" firstAttribute="top" secondItem="5bX-gc-b5I" secondAttribute="top" id="4u6-zX-CYx"/>
+                            <constraint firstItem="jJd-NG-Bq4" firstAttribute="top" secondItem="HFG-gM-vLu" secondAttribute="bottom" id="D2C-rI-D8O"/>
+                            <constraint firstItem="jJd-NG-Bq4" firstAttribute="bottom" secondItem="5bX-gc-b5I" secondAttribute="bottom" id="NgV-ax-w2T"/>
+                            <constraint firstItem="HFG-gM-vLu" firstAttribute="trailing" secondItem="5bX-gc-b5I" secondAttribute="trailing" id="QIE-pR-gI4"/>
+                            <constraint firstItem="jJd-NG-Bq4" firstAttribute="trailing" secondItem="5bX-gc-b5I" secondAttribute="trailing" id="R5J-eI-dbg"/>
+                            <constraint firstItem="HFG-gM-vLu" firstAttribute="leading" secondItem="5bX-gc-b5I" secondAttribute="leading" id="bvc-pC-6zk"/>
+                            <constraint firstItem="jJd-NG-Bq4" firstAttribute="leading" secondItem="5bX-gc-b5I" secondAttribute="leading" id="sCC-hN-QHu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5bX-gc-b5I"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mortages" id="7T0-nL-AsX" userLabel="Mortages">
+                        <barButtonItem key="leftBarButtonItem" title="Clear All" id="Tgu-Zs-xjO">
+                            <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="clearAllFields:" destination="Jt5-6v-DhQ" id="nZi-Jt-UIE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="Ecr-WL-kSo">
+                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="yob-Bj-eKf" kind="show" id="UXy-Uh-sWD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="interestTextF" destination="65x-6F-LH0" id="Yt8-aO-5fV"/>
+                        <outlet property="keyboard" destination="jJd-NG-Bq4" id="GYf-bz-jDU"/>
+                        <outlet property="loanAmountTextF" destination="sAz-ug-CI8" id="Efe-A7-seD"/>
+                        <outlet property="noOfMonthsTextF" destination="xgu-Iw-WCQ" id="emW-TN-8mL"/>
+                        <outlet property="paymentTextF" destination="KpP-9v-Ntg" id="5l8-iS-qMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sop-uW-QhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772.46376811594212" y="-163.39285714285714"/>
+        </scene>
+        <!--Loans-->
+        <scene sceneID="lbn-SE-Kuf">
+            <objects>
+                <viewController id="Bcs-rx-b5g" customClass="LoanViewController" customModule="FinancialCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Rfe-1T-rHg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwS-lA-yUJ">
+                                <rect key="frame" x="0.0" y="88" width="375" height="406"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="0ES-6d-TGk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUl-29-j7o">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW1-gs-8vq">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f9f-OQ-Lcv">
+                                                        <rect key="frame" x="25" y="20" width="325" height="360"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Loan Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dv6-2u-cQo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979452058" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Loan Amount"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="Bcs-rx-b5g" eventType="editingDidEnd" id="U7G-0x-o95"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Interest" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uom-gz-Nne">
+                                                                <rect key="frame" x="0.0" y="76" width="325" height="56"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Interest"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="Bcs-rx-b5g" eventType="editingDidEnd" id="JqL-4W-Xek"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Payment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7B-47-aE1">
+                                                                <rect key="frame" x="0.0" y="152" width="325" height="56"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Payment"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="Bcs-rx-b5g" eventType="editingDidEnd" id="Qzo-WK-atj"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No of Months" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDK-kY-Xjj">
+                                                                <rect key="frame" x="0.0" y="228" width="325" height="56"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="No of months">
+                                                                    <bool key="isElement" value="YES"/>
+                                                                </accessibility>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <attributedString key="userComments">
+                                                                    <fragment content="No of months"/>
+                                                                </attributedString>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="Bcs-rx-b5g" eventType="editingDidEnd" id="jG5-cW-R8P"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crH-wc-cgB">
+                                                                <rect key="frame" x="0.0" y="304" width="325" height="56"/>
+                                                                <color key="backgroundColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="0.7984535530849316" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Calculate">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="calculateFunction:" destination="Bcs-rx-b5g" eventType="touchUpInside" id="e4Q-Ku-EUT"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.1514568329" green="0.39464855189999998" blue="0.50589609150000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="O1R-p4-CtD"/>
+                                                    <constraint firstItem="f9f-OQ-Lcv" firstAttribute="leading" secondItem="hW1-gs-8vq" secondAttribute="leading" constant="25" id="bN6-6G-ALy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f9f-OQ-Lcv" secondAttribute="bottom" constant="20" id="dzF-2E-Bbd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f9f-OQ-Lcv" secondAttribute="trailing" constant="25" id="ipv-1n-d1X"/>
+                                                    <constraint firstItem="f9f-OQ-Lcv" firstAttribute="top" secondItem="hW1-gs-8vq" secondAttribute="top" constant="20" id="oFv-pt-hb2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.066802823600000005" green="0.066802823600000005" blue="0.066802823600000005" alpha="0.15467144690000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="hW1-gs-8vq" firstAttribute="width" secondItem="hUl-29-j7o" secondAttribute="width" id="KNp-OB-s3d"/>
+                                            <constraint firstItem="hW1-gs-8vq" firstAttribute="trailing" secondItem="hUl-29-j7o" secondAttribute="trailing" id="OZ1-cc-neR"/>
+                                            <constraint firstItem="hW1-gs-8vq" firstAttribute="bottom" secondItem="hUl-29-j7o" secondAttribute="bottom" id="Ty6-4I-GYl"/>
+                                            <constraint firstItem="hW1-gs-8vq" firstAttribute="top" secondItem="hUl-29-j7o" secondAttribute="top" id="USq-uG-5L5"/>
+                                            <constraint firstItem="hW1-gs-8vq" firstAttribute="leading" secondItem="hUl-29-j7o" secondAttribute="leading" id="Wkw-xb-Stx"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="isF-7v-KEn"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="jCF-eV-n45"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0ES-6d-TGk" secondAttribute="trailing" id="4Y8-yR-zqG"/>
+                                    <constraint firstItem="hUl-29-j7o" firstAttribute="leading" secondItem="iwS-lA-yUJ" secondAttribute="leading" id="Gbl-gq-56x"/>
+                                    <constraint firstAttribute="bottom" secondItem="0ES-6d-TGk" secondAttribute="bottom" id="HwE-ld-kYR"/>
+                                    <constraint firstAttribute="bottom" secondItem="hUl-29-j7o" secondAttribute="bottom" id="Mna-74-ej6"/>
+                                    <constraint firstAttribute="trailing" secondItem="hUl-29-j7o" secondAttribute="trailing" id="Pha-Os-Fzj"/>
+                                    <constraint firstItem="hUl-29-j7o" firstAttribute="leading" secondItem="iwS-lA-yUJ" secondAttribute="leading" id="alw-B5-zIh"/>
+                                    <constraint firstItem="hUl-29-j7o" firstAttribute="top" secondItem="iwS-lA-yUJ" secondAttribute="top" id="fJb-sK-4e3"/>
+                                    <constraint firstAttribute="trailing" secondItem="hUl-29-j7o" secondAttribute="trailing" id="g9h-zA-c1x"/>
+                                    <constraint firstItem="hUl-29-j7o" firstAttribute="top" secondItem="iwS-lA-yUJ" secondAttribute="top" id="giu-gw-rxF"/>
+                                    <constraint firstItem="0ES-6d-TGk" firstAttribute="leading" secondItem="iwS-lA-yUJ" secondAttribute="leading" id="j1v-r7-Dob"/>
+                                    <constraint firstItem="hUl-29-j7o" firstAttribute="centerY" secondItem="iwS-lA-yUJ" secondAttribute="centerY" id="qXM-En-1oY"/>
+                                    <constraint firstItem="0ES-6d-TGk" firstAttribute="top" secondItem="iwS-lA-yUJ" secondAttribute="top" id="rBc-I7-0om"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nd8-Zg-Agt" customClass="Keyboard" customModule="FinancialCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="494" width="375" height="235"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OYn-E2-0In" firstAttribute="bottom" secondItem="nd8-Zg-Agt" secondAttribute="bottom" id="3LY-fa-Vbe"/>
+                            <constraint firstItem="iwS-lA-yUJ" firstAttribute="top" secondItem="OYn-E2-0In" secondAttribute="top" id="3Nb-K6-Gcj"/>
+                            <constraint firstItem="nd8-Zg-Agt" firstAttribute="leading" secondItem="OYn-E2-0In" secondAttribute="leading" id="cfl-0n-n8N"/>
+                            <constraint firstItem="iwS-lA-yUJ" firstAttribute="leading" secondItem="OYn-E2-0In" secondAttribute="leading" id="fBs-of-8qk"/>
+                            <constraint firstItem="nd8-Zg-Agt" firstAttribute="top" secondItem="iwS-lA-yUJ" secondAttribute="bottom" id="fzh-Sw-ZAf"/>
+                            <constraint firstItem="OYn-E2-0In" firstAttribute="trailing" secondItem="nd8-Zg-Agt" secondAttribute="trailing" id="ngu-KY-eDo"/>
+                            <constraint firstItem="iwS-lA-yUJ" firstAttribute="height" secondItem="Rfe-1T-rHg" secondAttribute="height" multiplier="0.5" id="oN0-4p-M0q"/>
+                            <constraint firstItem="OYn-E2-0In" firstAttribute="trailing" secondItem="iwS-lA-yUJ" secondAttribute="trailing" id="vFU-ha-WPQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OYn-E2-0In"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Loans" id="Tgb-kD-MUb">
+                        <barButtonItem key="leftBarButtonItem" title="Clear All" id="xAh-Tc-IuO">
+                            <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="clearAllFields:" destination="Bcs-rx-b5g" id="RN5-iO-U0P"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="cpu-RM-47K">
+                            <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="yob-Bj-eKf" kind="show" id="MoO-NF-6ex"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="interestTextF" destination="uom-gz-Nne" id="dXX-DV-TrO"/>
+                        <outlet property="keyboard" destination="nd8-Zg-Agt" id="JQF-Go-JRm"/>
+                        <outlet property="loanAmountTextF" destination="dv6-2u-cQo" id="LGM-Zt-ORp"/>
+                        <outlet property="noOfMonthsTextF" destination="bDK-kY-Xjj" id="hqg-dy-hgp"/>
+                        <outlet property="paymentTextF" destination="P7B-47-aE1" id="rLs-PF-1Zz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gK-M5-nXG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.44927536231884" y="-164.0625"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PZy-eR-28v" kind="relationship" relationship="viewControllers" id="JeB-kc-7Rw"/>
+                        <segue destination="jsm-tm-Dfc" kind="relationship" relationship="viewControllers" id="yfY-nt-gSc"/>
+                        <segue destination="3dd-82-ADl" kind="relationship" relationship="viewControllers" id="2sO-c4-CHw"/>
+                        <segue destination="V8L-2V-88X" kind="relationship" relationship="viewControllers" id="6xT-Pj-mbI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="-1821"/>
+        </scene>
+        <!--Compound Savings-->
+        <scene sceneID="z2P-UR-MfM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jsm-tm-Dfc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Compound Savings" image="cSavings" id="acW-dT-cKf">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="back" id="OPq-L8-yKX">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="qjm-XK-k07"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAb-9X-sFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1859" y="-974"/>
+        </scene>
+        <!--Mortages-->
+        <scene sceneID="SUx-sb-6kX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3dd-82-ADl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mortages" image="mortage" id="gWI-pZ-hF4">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JuQ-NL-ZCE">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jt5-6v-DhQ" kind="relationship" relationship="rootViewController" id="34q-4A-Aox"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teV-LC-QJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772.46376811594212" y="-974.33035714285711"/>
+        </scene>
+        <!--Loans-->
+        <scene sceneID="bvH-jf-Z3z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V8L-2V-88X" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Loans" image="loan" id="uee-nL-GdM">
+                        <color key="badgeColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fdS-Yn-eTe">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bcs-rx-b5g" kind="relationship" relationship="rootViewController" id="8Qv-Nj-UlC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1V-e6-Drh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="-974"/>
+        </scene>
+        <!--Savings-->
+        <scene sceneID="GFy-80-d38">
+            <objects>
+                <viewController id="RiI-qC-i68" customClass="SavingsViewController" customModule="FinancialCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u93-Iq-Vn0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP1-ZH-TjK">
+                                <rect key="frame" x="0.0" y="88" width="375" height="416"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="EVF-E1-NCt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="434"/>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-Mj-Whs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="416"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYa-1m-54I">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mU2-3d-PIx">
+                                                        <rect key="frame" x="25" y="20" width="325" height="410"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Future Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6g-oZ-ova">
+                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="56"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="RiI-qC-i68" eventType="editingDidEnd" id="tog-tR-Zjt"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Payment Per Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzE-6n-mtW">
+                                                                <rect key="frame" x="0.0" y="71" width="325" height="55.666666666666657"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="RiI-qC-i68" eventType="editingDidEnd" id="Fdq-D2-kXi"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Annual Interest Rate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGM-JF-JCU">
+                                                                <rect key="frame" x="0.0" y="141.66666666666666" width="325" height="56"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="RiI-qC-i68" eventType="editingDidEnd" id="slL-hJ-wFx"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Years" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HP2-tC-H4X">
+                                                                <rect key="frame" x="0.0" y="212.66666666666669" width="325" height="55.666666666666686"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="RiI-qC-i68" eventType="editingDidEnd" id="IzS-2t-qjN"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Compounds per Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pjr-fO-HFQ">
+                                                                <rect key="frame" x="0.0" y="283.33333333333331" width="325" height="56"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.89937392979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="textValueEdited:" destination="RiI-qC-i68" eventType="editingDidEnd" id="TKJ-DD-RrK"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty7-Dk-lcP">
+                                                                <rect key="frame" x="0.0" y="354.33333333333331" width="325" height="55.666666666666686"/>
+                                                                <color key="backgroundColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="0.86863227740000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <state key="normal" title="Calculate">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="calculateFunction:" destination="RiI-qC-i68" eventType="touchUpInside" id="Pgz-zU-c6S"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="mU2-3d-PIx" firstAttribute="leading" secondItem="GYa-1m-54I" secondAttribute="leading" constant="25" id="4U1-99-rB9"/>
+                                                    <constraint firstAttribute="height" constant="450" id="Ftc-tx-AGn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mU2-3d-PIx" secondAttribute="trailing" constant="25" id="fNS-kP-SAd"/>
+                                                    <constraint firstItem="mU2-3d-PIx" firstAttribute="top" secondItem="GYa-1m-54I" secondAttribute="top" constant="20" id="iJ2-8a-Imb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mU2-3d-PIx" secondAttribute="bottom" constant="20" id="lQr-XV-XZK"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.066802823600000005" green="0.066802823600000005" blue="0.066802823600000005" alpha="0.15467144690000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="GYa-1m-54I" firstAttribute="top" secondItem="ydh-PY-ywR" secondAttribute="top" id="3UZ-02-h4u"/>
+                                            <constraint firstItem="GYa-1m-54I" firstAttribute="width" secondItem="68x-SX-TAd" secondAttribute="width" id="GdK-3E-6cx"/>
+                                            <constraint firstItem="GYa-1m-54I" firstAttribute="bottom" secondItem="ydh-PY-ywR" secondAttribute="bottom" id="J2G-Ls-Izj"/>
+                                            <constraint firstItem="GYa-1m-54I" firstAttribute="trailing" secondItem="ydh-PY-ywR" secondAttribute="trailing" id="Udh-pr-fXm"/>
+                                            <constraint firstItem="GYa-1m-54I" firstAttribute="leading" secondItem="ydh-PY-ywR" secondAttribute="leading" id="qv6-Uc-84L"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="ydh-PY-ywR"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="68x-SX-TAd"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dkG-Mj-Whs" secondAttribute="trailing" id="DyP-2S-QWI"/>
+                                    <constraint firstItem="dkG-Mj-Whs" firstAttribute="top" secondItem="cP1-ZH-TjK" secondAttribute="top" id="EWI-b9-yGI"/>
+                                    <constraint firstAttribute="trailing" secondItem="EVF-E1-NCt" secondAttribute="trailing" id="Gbc-0a-i0x"/>
+                                    <constraint firstItem="EVF-E1-NCt" firstAttribute="top" secondItem="cP1-ZH-TjK" secondAttribute="top" id="bvT-ak-bSr"/>
+                                    <constraint firstAttribute="bottom" secondItem="dkG-Mj-Whs" secondAttribute="bottom" id="nfg-7x-G4f"/>
+                                    <constraint firstAttribute="bottom" secondItem="EVF-E1-NCt" secondAttribute="bottom" constant="-18" id="pdU-4A-c5b"/>
+                                    <constraint firstItem="EVF-E1-NCt" firstAttribute="leading" secondItem="cP1-ZH-TjK" secondAttribute="leading" id="pxh-zL-HXv"/>
+                                    <constraint firstItem="dkG-Mj-Whs" firstAttribute="leading" secondItem="cP1-ZH-TjK" secondAttribute="leading" id="sJP-cJ-evk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHe-su-8AE" customClass="Keyboard" customModule="FinancialCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="504" width="375" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eHe-su-8AE" firstAttribute="trailing" secondItem="bKL-gt-m8G" secondAttribute="trailing" id="81a-bf-Qxl"/>
+                            <constraint firstItem="cP1-ZH-TjK" firstAttribute="top" secondItem="bKL-gt-m8G" secondAttribute="top" id="IOg-AV-KA5"/>
+                            <constraint firstItem="cP1-ZH-TjK" firstAttribute="trailing" secondItem="bKL-gt-m8G" secondAttribute="trailing" id="JCQ-r7-bXR"/>
+                            <constraint firstItem="cP1-ZH-TjK" firstAttribute="height" secondItem="u93-Iq-Vn0" secondAttribute="height" multiplier="0.512277" id="ZpP-Gu-aul"/>
+                            <constraint firstItem="eHe-su-8AE" firstAttribute="top" secondItem="cP1-ZH-TjK" secondAttribute="bottom" id="diI-pf-Ig8"/>
+                            <constraint firstItem="eHe-su-8AE" firstAttribute="leading" secondItem="bKL-gt-m8G" secondAttribute="leading" id="mw1-Qc-iUt"/>
+                            <constraint firstItem="cP1-ZH-TjK" firstAttribute="leading" secondItem="bKL-gt-m8G" secondAttribute="leading" id="nav-zE-LIu"/>
+                            <constraint firstItem="eHe-su-8AE" firstAttribute="bottom" secondItem="bKL-gt-m8G" secondAttribute="bottom" id="qi9-fq-dKh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bKL-gt-m8G"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Savings" id="Rx7-13-dwo">
+                        <barButtonItem key="leftBarButtonItem" title="Clear All" id="NCQ-oM-VsM">
+                            <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="clearAllFields:" destination="RiI-qC-i68" id="SJC-NM-DDM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="5Eo-hd-idZ">
+                            <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="yob-Bj-eKf" kind="show" id="UMc-44-Vse"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="annualInterestTextF" destination="PGM-JF-JCU" id="AB7-ic-5Ey"/>
+                        <outlet property="compoundsTextF" destination="Pjr-fO-HFQ" id="SY2-HD-BUQ"/>
+                        <outlet property="futureValueTextF" destination="f6g-oZ-ova" id="k1j-29-D4D"/>
+                        <outlet property="keyboard" destination="eHe-su-8AE" id="vgi-VS-fmg"/>
+                        <outlet property="noOfYearsTextF" destination="HP2-tC-H4X" id="Jtz-lV-REG"/>
+                        <outlet property="paymentPerYearTextF" destination="WzE-6n-mtW" id="E3n-lh-CSU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Avj-3U-d5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2952.8000000000002" y="-164.03940886699507"/>
+        </scene>
+        <!--Savings-->
+        <scene sceneID="BLm-Yn-dQA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZy-eR-28v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Savings" image="savings" id="sAQ-Sl-dIF">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ucn-Ew-QY4">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RiI-qC-i68" kind="relationship" relationship="rootViewController" id="pWb-Tb-UgB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UTw-vK-CLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2952" y="-974"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="16" height="16"/>
+        <image name="background1" width="1040" height="1536"/>
+        <image name="cSavings" width="22" height="22"/>
+        <image name="loan" width="22" height="22"/>
+        <image name="mortage" width="22" height="22"/>
+        <image name="savings" width="22" height="22"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MoO-NF-6ex"/>
+    </inferredMetricsTieBreakers>
+</document>

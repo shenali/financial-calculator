@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomPopUp">
+            <connections>
+                <outlet property="errorText" destination="BzM-D8-6BI" id="xJ0-9U-ioN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="219"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSP-C3-LXP">
+                    <rect key="frame" x="36" y="29.5" width="230" height="160"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzM-D8-6BI">
+                            <rect key="frame" x="16" y="16" width="198" height="84"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pag-vz-IyN">
+                            <rect key="frame" x="0.0" y="116" width="230" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="88L-xS-3qS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.94448113440000003" green="0.63811331989999998" blue="0.23119938370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelPressed:" destination="-1" eventType="touchUpInside" id="SPG-G6-Sfi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="BzM-D8-6BI" secondAttribute="trailing" constant="16" id="BMl-LE-S7G"/>
+                        <constraint firstItem="Pag-vz-IyN" firstAttribute="top" secondItem="BzM-D8-6BI" secondAttribute="bottom" constant="16" id="CEa-98-0k6"/>
+                        <constraint firstItem="BzM-D8-6BI" firstAttribute="top" secondItem="QSP-C3-LXP" secondAttribute="top" constant="16" id="Scz-ZJ-yUY"/>
+                        <constraint firstItem="Pag-vz-IyN" firstAttribute="leading" secondItem="QSP-C3-LXP" secondAttribute="leading" id="Tk5-J6-Fde"/>
+                        <constraint firstAttribute="trailing" secondItem="Pag-vz-IyN" secondAttribute="trailing" id="dd0-5l-3lE"/>
+                        <constraint firstAttribute="height" constant="160" id="ePF-WB-9Sb"/>
+                        <constraint firstAttribute="bottom" secondItem="Pag-vz-IyN" secondAttribute="bottom" id="oA5-T4-VKN"/>
+                        <constraint firstItem="BzM-D8-6BI" firstAttribute="leading" secondItem="QSP-C3-LXP" secondAttribute="leading" constant="16" id="ykj-o3-qGj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.2000022233" green="0.19999703760000001" blue="0.1999980509" alpha="0.61683968320000004" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="QSP-C3-LXP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7q1-P3-rIX"/>
+                <constraint firstItem="QSP-C3-LXP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T18-ko-ByK"/>
+                <constraint firstItem="QSP-C3-LXP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="aft-aQ-iY4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QSP-C3-LXP" secondAttribute="trailing" constant="36" id="jMA-oc-dcU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="236.23188405797103" y="-179.12946428571428"/>
+        </view>
+    </objects>
+</document>
